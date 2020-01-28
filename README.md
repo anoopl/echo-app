@@ -14,11 +14,10 @@ Update the test.tfvars file with GCP project name
 
 run:
 
-`cd terraform-gke
- terraform init
- terraform plan  -var-file test.tfvars
- terraform apply  -var-file test.tfvars
- `
+`cd terraform-gke`
+ `terraform init`
+ `terraform plan  -var-file test.tfvars`
+ `terraform apply  -var-file test.tfvars`
 
 #Now deploy Nginx ingress and Echo app:
 
