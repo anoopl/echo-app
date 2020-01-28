@@ -27,26 +27,32 @@ run:
 For this you need to have Helm 3 installed in as binary named helm3
 
 to install Nginx Ingress run:
+
+
 `deploy_nginx_ingress.sh
 `
 
-After this deploy the echo app with
+After this deploy the echo app with:
+
+
 `
 bash  deploy_echo.sh
 `
 
 Now find the Public IP of Nginx Ingress controller with:
 
+
 ` kubectl -n nginx-ingress get svc
 `
 
 Add a /etc/host entry with this IP:
 
-<IP_OF_INGRESS_CONTROLLER> echo-example.local
+
+`<IP_OF_INGRESS_CONTROLLER> echo-example.local`
 
 
 After this you can access the echo app at:
 
-http://echo-example.local:3333
+`http://echo-example.local:3333`
 
 Cheers!!!
