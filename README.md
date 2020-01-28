@@ -1,13 +1,15 @@
 # echo-app
-Terraform GKE + Nginx Ingress + Echo App
+Terraform GKE + Nginx Ingress Port 3333) + Echo App ( Port 8080)
 
 #Steps to Deploy app:
 
 
-To Create GKE cluster, create a service account for Terraform 
-(with permissions to create GKE CLuster and resources)
+To Create GKE cluster, create a service account for Terraform  (with permissions to create GKE CLuster and resources)
+
 Download the key.json for the Service account
+
 Edit the provider.tf with the json file name
+
 Update the test.tfvars file with GCP project name
 
 run:
@@ -23,12 +25,12 @@ run:
 For this you need to have Helm 3 installed in as binary named helm3
 
 to install Nginx Ingress run:
-`bash deploy_nginx_ingress.sh
+`deploy_nginx_ingress.sh
 `
 
 After this deploy the echo app with
 `
-bash  deploy_echo_app.sh
+bash  deploy_echo.sh
 `
 
 Now find the Public IP of Nginx Ingress controller with:
