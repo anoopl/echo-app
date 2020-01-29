@@ -54,4 +54,4 @@ After this you can access the echo app at:
 
 `http://echo-example.local:3333`
 
-Cheers!!!
+Cheers!
