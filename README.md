@@ -24,7 +24,7 @@ run:
 
 #Now deploy Nginx ingress and Echo app:
 
-For this you need to have Helm version 3.x ( https://github.com/helm/helm ) installed in as binary named helm3 in your path.
+For this you need to have Helm version 3.x ( https://github.com/helm/helm/releases ) installed in as binary named helm3 in your path. This is not to conflict with Helm Version 2 if you have already installed it.
 
 to install Nginx Ingress run:
 
