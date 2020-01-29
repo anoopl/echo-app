@@ -1,5 +1,5 @@
 # echo-app
-Terraform GKE + Nginx Ingress Port 3333) + Echo App ( Port 8080)
+Terraform GKE + Nginx Ingress ( Port 3333) + Echo App ( Port 8080)
 
 #Steps to Deploy app:
 
@@ -24,7 +24,7 @@ run:
 
 #Now deploy Nginx ingress and Echo app:
 
-For this you need to have Helm 3 installed in as binary named helm3
+For this you need to have Helm version 3.x ( https://github.com/helm/helm ) installed in as binary named helm3 in your path.
 
 to install Nginx Ingress run:
 
@@ -42,8 +42,7 @@ bash  deploy_echo.sh
 Now find the Public IP of Nginx Ingress controller with:
 
 
-` kubectl -n nginx-ingress get svc
-`
+`kubectl -n nginx-ingress get svc`
 
 Add a /etc/host entry with this IP:
 
