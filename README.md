@@ -1,5 +1,21 @@
-# echo-app
+#Echo-app
 Terraform GKE + Nginx Ingress ( Port 3333) + Echo App ( Port 8080)
+
+#Prerequisite:
+
+Install Terraform: We use Terraform to create GKE and related resources.
+Please install Terraform by following: https://learn.hashicorp.com/terraform/getting-started/install.html
+
+
+Install Gcloud: To get the GKE credetials we need Gcloud installed in your path.
+Install Gcloud by following https://cloud.google.com/sdk/install
+
+Install Kubectl: Kubectl is used by the Echo app deployment script. Please install by following: https://kubernetes.io/docs/tasks/tools/install-kubectl/
+
+
+Install Helm 3 : 
+You need to have Helm latest version 3.x ( https://github.com/helm/helm/releases ) installed in as binary named helm3 in your path. This is not to conflict with Helm Version 2 if you have already installed it. Otherwise if you have only Helm 3 installed as helm in path, you can edit the script and update the command helm3 to helm.
+
 
 #Steps to Deploy app:
 
@@ -12,7 +28,7 @@ Edit the provider.tf with the json file name
 
 Update the test.tfvars file with GCP project name
 
-run:
+After than run Terrafform:
 
 `cd terraform-gke`
 
@@ -22,11 +38,15 @@ run:
 
 `terraform apply  -var-file test.tfvars`
 
+Please note that last step in Terraform will download the GKE credentails to your ~/.kube/config. If you already have the config file it will merge to it.
+
 #Now deploy Nginx ingress and Echo app:
 
-For this you need to have Helm version 3.x ( https://github.com/helm/helm/releases ) installed in as binary named helm3 in your path. This is not to conflict with Helm Version 2 if you have already installed it.
+We expopose the Echo App to outside cluster using Nginx Ingress on port 3333
 
-to install Nginx Ingress run:
+( https://github.com/helm/charts/tree/master/stable/nginx-ingress )
+
+To install Nginx Ingress run:
 
 
 `deploy_nginx_ingress.sh
