@@ -14,7 +14,7 @@ Install Kubectl: Kubectl is used by the Echo app deployment script. Please insta
 
 
 Install Helm 3 : 
-You need to have Helm latest version 3.x ( https://github.com/helm/helm/releases ) installed in as binary named helm3 in your path. This is not to conflict with Helm Version 2 if you have already installed it. Otherwise if you have only Helm 3 installed as helm in path, you can edit the script and update the command helm3 to helm.
+You need to have Helm latest version 3.x ( https://github.com/helm/helm/releases ) installed in as binary named helm3 in your path. This is not to conflict with Helm Version 2 if you have already installed it. Otherwise if you have only Helm 3 installed as helm in path, you can edit the scripts (deploy_echo.sh, deploy_nginx_ingress.sh) and update the command helm3 to helm.
 
 
 # Steps to Create GKE cluster, Ingress and deploy app:
@@ -68,6 +68,8 @@ Add a /etc/host entry with this IP:
 
 
 `<IP_OF_INGRESS_CONTROLLER> echo-example.local`
+
+Please note that, if you access directly on the IP, application will not work. It would show an error Default Backend 404
 
 
 After this you can access the echo app at:
