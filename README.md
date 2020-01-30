@@ -1,7 +1,7 @@
-#Echo-app
+# Echo-app
 Terraform GKE + Nginx Ingress ( Port 3333) + Echo App ( Port 8080)
 
-#Prerequisite:
+# Prerequisite:
 
 Install Terraform: We use Terraform to create GKE and related resources.
 Please install Terraform by following: https://learn.hashicorp.com/terraform/getting-started/install.html
@@ -17,7 +17,7 @@ Install Helm 3 :
 You need to have Helm latest version 3.x ( https://github.com/helm/helm/releases ) installed in as binary named helm3 in your path. This is not to conflict with Helm Version 2 if you have already installed it. Otherwise if you have only Helm 3 installed as helm in path, you can edit the script and update the command helm3 to helm.
 
 
-#Steps to Deploy app:
+# Steps to Create GKE cluster, Ingress and deploy app:
 
 
 To Create GKE cluster, create a service account for Terraform  (with permissions to create GKE CLuster and resources)
@@ -40,7 +40,7 @@ After than run Terrafform:
 
 Please note that last step in Terraform will download the GKE credentails to your ~/.kube/config. If you already have the config file it will merge to it.
 
-#Now deploy Nginx ingress and Echo app:
+# Now deploy Nginx ingress and Echo app:
 
 We expopose the Echo App to outside cluster using Nginx Ingress on port 3333
 
