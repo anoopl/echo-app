@@ -1,7 +1,7 @@
 # Echo-app
 Terraform GKE + Nginx Ingress ( Port 3333) + Echo App ( Port 8080)
 
-# Prerequisites:
+# Requirements:
 
 Install Terraform: We use Terraform to create GKE and related resources.
 Please install Terraform by following: https://learn.hashicorp.com/terraform/getting-started/install.html
