@@ -3,13 +3,16 @@ Terraform GKE + Nginx Ingress ( Port 3333) + Echo App ( Port 8080)
 
 # Requirements:
 
-**Terraform** : We use Terraform to create GKE and related resources.
+**Terraform** : 
+We use Terraform to create GKE and related resources.
 Please install Terraform by following: https://learn.hashicorp.com/terraform/getting-started/install.html
 
-**Gcloud CLI** : To get the GKE credetials we need Gcloud installed in your path.
+**Gcloud CLI** : 
+To get the GKE credetials we need Gcloud installed in your path.
 Install Gcloud by following https://cloud.google.com/sdk/install
 
-**Kubectl** : Kubectl is used by the Echo app deployment script. Please install by following: https://kubernetes.io/docs/tasks/tools/install-kubectl/
+**Kubectl** :
+Kubectl is used by the Echo app deployment script. Please install by following: https://kubernetes.io/docs/tasks/tools/install-kubectl/
 
 
 **Helm 3** : 
